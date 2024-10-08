@@ -1,0 +1,23 @@
+/MovieRentalSystem
+│
+├── /config                # Database configuration
+│   └── db.js              # Handles database connection
+│
+├── /controllers           # CRUD operations for models
+│   ├── customerController.js  # Handles customer-related operations
+│   ├── genreController.js     # Handles genre-related operations
+│   ├── movieController.js     # Handles movie-related operations
+│   └── rentalController.js    # Handles rental-related operations
+│
+├── /models                # Database models
+│   ├── Customer.js        # Defines the Customer model
+│   ├── Genre.js           # Defines the Genre model
+│   ├── Movie.js           # Defines the Movie model
+│   ├── Rental.js          # Defines the Rental model
+│   └── relations.js       # Sets up model relationships (associations)
+│
+├── /routes                # API routes
+│   └── routes.js          # Defines routes for all controllers
+│
+├── index.js               # Entry point for the application
+└── package.json           # Project metadata and dependencies

@@ -1,0 +1,176 @@
+Step 1: User Registration (POST /register)
+
+    URL: http://localhost:3000/register
+
+    Method: POST
+
+    Request Body (JSON):
+
+    json
+
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "Password123"
+    }
+
+    Description: This request registers a new user by providing a name, email, and password.
+
+Step 2: User Authentication (POST /login)
+
+    URL: http://localhost:3000/login
+
+    Method: POST
+
+    Request Body (JSON):
+
+    json
+
+    {
+      "email": "john.doe@example.com",
+      "password": "Password123"
+    }
+
+    Description: Upon successful authentication, you will receive a JWT token, which should be stored in cookies and sent with every subsequent secured request.
+
+Step 3: Get All Customers (GET /customers)
+
+    URL: http://localhost:3000/api/customers
+    Method: GET
+
+Step 4: Get Customer by ID (GET /customers/
+)
+
+    URL: http://localhost:3000/api/customers/1 (replace 1 with the desired ID)
+    Method: GET
+
+Step 5: Update Customer (PUT /customers/
+)
+
+    URL: http://localhost:3000/api/customers/1 (replace 1 with the customer ID)
+
+    Method: PUT
+
+    Request Body (JSON):
+
+    json
+
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "987-654-3210"
+    }
+
+    Description: This request updates the customer's data.
+
+Step 6: Delete Customer (DELETE /customers/
+)
+
+    URL: http://localhost:3000/api/customers/1 (replace 1 with the customer ID)
+    Method: DELETE
+
+Step 7: Create Movie (POST /movies)
+
+    URL: http://localhost:3000/api/movies
+
+    Method: POST
+
+    Header:
+    Authorization: Bearer {your token}
+
+    Request Body (JSON):
+
+    json
+
+    {
+      "title": "Inception",
+      "description": "A mind-bending thriller",
+      "releaseDate": "2010-07-16",
+      "genreId": 1
+    }
+
+    Description: This request creates a new movie.
+
+Step 8: Get All Movies (GET /movies)
+
+    URL: http://localhost:3000/api/movies
+    Method: GET
+
+Step 9: Get Movie by ID (GET /movies/
+)
+
+    URL: http://localhost:3000/api/movies/1 (replace 1 with the movie ID)
+    Method: GET
+
+Step 10: Update Movie (PUT /movies/
+)
+
+    URL: http://localhost:3000/api/movies/1 (replace 1 with the movie ID)
+
+    Method: PUT
+
+    Request Body (JSON):
+
+    json
+
+    {
+      "title": "Inception (Extended)",
+      "description": "Extended version of the mind-bending thriller",
+      "releaseDate": "2010-07-16"
+    }
+
+    Description: This request updates the movie details.
+
+Step 11: Delete Movie (DELETE /movies/
+)
+
+    URL: http://localhost:3000/api/movies/1 (replace 1 with the movie ID)
+    Method: DELETE
+
+Step 12: Create Genre (POST /genres)
+
+    URL: http://localhost:3000/api/genres
+
+    Method: POST
+
+    Header:
+    Authorization: Bearer {your token}
+
+    Request Body (JSON):
+
+    json
+
+    {
+      "name": "Action"
+    }
+
+    Description: This request creates a new genre.
+
+Step 13: Get All Genres (GET /genres)
+
+    URL: http://localhost:3000/api/genres
+    Method: GET
+
+Step 14: Create Rental (POST /rentals)
+
+    URL: http://localhost:3000/api/rentals
+
+    Method: POST
+
+    Request Body (JSON):
+
+    json
+
+    {
+      "customerId": 1,
+      "movieId": 1,
+      "rentalDate": "2024-10-01",
+      "returnDate": "2024-10-10"
+    }
+
+    Description: This request creates a new movie rental for a customer.
+
+Step 15: Get All Rentals (GET /rentals)
+
+    URL: http://localhost:3000/api/rentals
+    Method: GET
